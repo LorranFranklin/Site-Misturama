@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Open+Sans:wght@300;400;500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Reset de estilos */
+* { 
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+/* Estilos para o cabeçalho (header) */
+header {
+  display: flex;
+  justify-content: center;
+  height: 90px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  align-items: center;
+  margin: 0px 1rem;
+  padding: 0 1.9rem;
+}
+
+.nav-logo img {
+  width: 200px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+/* Estilos para os itens do menu */
+nav a {
+  padding: 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+}
+/* Estilos para o hover dos links do menu */
+nav .link a:hover {
+  background-color: #393939;
+  color: white;
+  border-radius: 1rem;
+}
+
+/* até aqui tudo perfeito para acesso via pc */
+/*body */ 
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+/* Estilo para o slider */
+.slider {
+  flex: 1;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slider-width {
+  height: 100%;
+  display: flex;
+  transition: all 0.5s;
+  background-size: cover;
+}
+
+.slider--item {
+  width: 100%;
+  height: inherit;
+  background-position: center;
+  background-size: cover;
+}
+
+.slider-controls {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* estilo para os botões */
+.control {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  overflow: hidden; 
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider-controls .control{
+  border: 2px solid transparent;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.slider-controls .control span{
+  font-size: 50px ;
+  color: #fff;
+}
+
+.slider-controls .control:hover{
+  background-color: #1e40af;
+  border-color: #fff;
+}
+
+.banner {
+  max-width: 1200px;
+  padding: 2rem 0px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  width: 1200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .catalogo,
+.banner .reserva {
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.5s ease;
+}
+
+.banner .reserva {
+  background-image: url('../img/04-reserva.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.banner .catalogo {
+  background-image: url('../img/05-Delivery.png');
+  background-position: center;
+  background-size: cover;
+}
+
+.banner .catalogo:hover,
+.banner .reserva:hover {
+  border-color: #fff;
+}
+
+.banner .catalogo .content,
+.banner .reserva .content {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+
+.banner .catalogo h4,
+.banner .reserva h4 {
+  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-shadow: 1px 2px 0px #000;
+}
+
+.banner .catalogo h3,
+.banner .reserva h3 {
+  color: #fff;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  font-weight: 600;
+  text-shadow: 0px 2px 0px #000;
+}
+
+.botao {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+  text-shadow: 0px 2px 0px #000;
+}
+
+button {
+  background-color: transparent;
+  border: 2px solid #fff;
+}
+
+button:hover{
+  background-color: #1e40af;
+  border-color: #1e40af;
+}
+/* até aqui não mexo mais em nada pra cima */
+
+.default .section-title,
+.default .section-desc {
+  padding: 0 1rem;
+  font-family: "Helvetica Neue";
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.default .section-title {
+  font-size: 1.5rem;
+  color: #d2be8d;
+}
+
+.default .section-desc {
+  font-size: 3rem;
+  color: #441910;
+}
+
+.section-fotos {
+  width: 100vw;
+  max-width: 1200px;
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section-foto-lancamento {
+  width: 300px;
+}
+
+.section-foto-lancamento-area {
+  display: flex;
+  width: 290px;
+  height: 160px;
+  margin: 1rem;
+}
+
+.section-foto-lancamento-area img {
+  width: inherit;
+  height: inherit;
+}
+
+.section-foto-lancamento-info {
+  display: none;
+}
